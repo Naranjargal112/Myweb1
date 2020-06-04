@@ -1,0 +1,420 @@
+
+
+
+    <!doctype html>
+    <html>
+        <head>
+
+            <meta charset='utf-8'>
+            <title>Speech Recognation</title>
+            <meta charset="UTF-8">
+            <link rel="shortcut icon" type="image/x-icon" href="icon.png">
+            <link rel="stylesheet" href="base1.css">
+            <link rel="stylesheet" href="style1.css">
+            <link rel="stylesheet" href="font1.css">
+            <link rel="stylesheet" href="s2.css">
+            <link rel="stylesheet" href="script.js">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+ 
+            
+
+
+
+        </head>
+        <body>
+            <script async>(function(w, d) { w.CollectId = "5de8c0a0e8d5e835786b99f5"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+             <script src="script.js"></script>
+              <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+              <script>
+                  $(document).ready(function() {
+    $("#submit").click(function() {
+        speak($("#text").val());
+    })
+    
+    function speak(text){
+        text = text.replace(/\s/g, "%20");
+        if(text[text.length - 1] === "0"){
+            text = text.split("");
+            for(var i = 0; i < 3; i++){
+                text.pop();
+            }
+            text = text.join("");
+        } else if (text === "") {
+            speak("Please, enter a text");
+        }
+        
+        var audio = "https://audio1.spanishdict.com/audio?lang=en&text=" + text;
+        var spk = new Audio(audio);
+        spk.play();
+    }
+})
+              </script>
+            <nav>
+
+                   
+<a href="#home" id="toTop">
+        <i class="fa-music"></i>
+    </a>
+    <div class="chs-top">
+        <div class="chs-bar chs-dark-blue chs-card" id="myNavbar">
+            <a href="/" class="chs-bar-item chs-wide" style="padding:10px"><img src="logo2.png" height="40"></a>
+            
+            <div class="chs-right chs-hide-small" style="padding-top: 10px;">
+                <ul>
+              <li>  <a href="/#demo" class="chs-bar-item effect-1">
+                    МЭДЭЭЛЭЛ</a> </li>
+                &nbsp; &nbsp;
+             <li>  <a href="/#about" class="chs-bar-item effect-1" >
+                    ТУРШИЛТ</a> </li>
+                &nbsp; &nbsp;
+              <li>  <a href="/#team" class="chs-bar-item effect-1">
+                   МАНАЙ БАГ</a> </li>
+                &nbsp; &nbsp;
+               <li> <a href="/#cases" class="chs-bar-item effect-1">
+                    ТАЙЛАН</a> </li>
+                &nbsp; &nbsp;
+               <li> <a href="/#contact" class="chs-bar-item effect-1">
+                    
+                    ХОЛБОО БАРИХ</a> </li></ul>
+                &nbsp; &nbsp;
+               
+            </div>
+            
+
+           
+        </div>
+    </div>
+
+    
+    <nav class="chs-sidebar chs-bar-block chs-black chs-card chs-animate-left chs-hide-medium chs-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="chs_close()" class="chs-bar-item chs-button chs-large chs-padding-16">Хаах &times;</a>
+        <a href="/#demo" onclick="chs_close()" class="chs-bar-item chs-button">
+            МЭДЭЭЛЭЛ</a>
+        &nbsp; &nbsp;
+        <a href="/#about" onclick="chs_close()" class="chs-bar-item chs-button">
+            ТУРШИЛТ</a>
+        &nbsp; &nbsp;
+        <a href="/#about" onclick="chs_close()" class="chs-bar-item chs-button">
+            МАНАЙ БАГ</a>
+        &nbsp; &nbsp;
+        <a href="/#cases" onclick="chs_close()" class="chs-bar-item chs-button">
+            ТАЙЛАН</a>
+        &nbsp; &nbsp;
+        <a href="/#contact" onclick="chs_close()" class="chs-bar-item chs-button">
+            <i class="ico-envelope"></i>
+            ХОЛБОО БАРИХ</a>
+        &nbsp; &nbsp;
+        <a href="/en" class="chs-bar-item effect-1">
+                    <img src="/static/img/en.png" height="20"></a>
+                &nbsp; &nbsp;
+    </nav>
+
+            </nav>
+            
+    
+    <header class="bgimg chs-display-container chs-grayscale-min" id="home">
+        <div class="chs-display-left chs-text-white" style="padding:48px">
+            <span class="chs-xxlarge chs-hide-small"> ICSI440 Хүн компьютерийн<br> харилцаа хичээлийн хүрээнд 
+                </span><br>
+           
+            <span class="chs-large chs-hide-small"><br> <br><br> Бидний хийсэн дуу хоолой таних системтэй танилцана уу.</span>
+            <p>
+                <a href="#about" class="chs-button chs-white chs-padding-large chs-large chs-margin-top chs-opacity chs-hover-opacity-off">Турших </a>
+            </p>
+        </div>
+      
+    </header>
+
+    
+    <div class="chs-container chs-content chs-center" style="padding:64px 16px" id="demo">
+        <h3 class="chs-center"> ДУУ ХООЛОЙ ТАНИЛТ </h3>
+        <h2 id="instructions">What is Speech Recognition ?</h2>
+        <p class="chs-large chs-justify">Ярианы технологи нь дуу хоолой таних систем буюу Speech Recognition, Текстыг дуу авиа болгох систем буюу Speech Synthesis гэсэн vндсэн 2 хэсэгт хуваагддаг. Яриа таних гэдэг нь хүний ярианы дохиог текст руу хөрвүүлэх процессыг хэлнэ. Энэ технологи нь програм хангамжийг хэрэглэх, түүнтэй харилцахад илүү хялбар болгох, програм хангамжийн бүтээмжийг нэмэгдүүлэх хэрэгсэл юм. </p>
+        <h2 id="instructions" >ХӨГЖЛИЙН ТҮҮХ</h2>
+    <img class="history" src="history.png">
+        <h3>ТУРШИЛТ</h3>
+        
+        <div class="chs-third" style="padding-left: 370px" >
+
+            <a href="/tts" class="chs-btn chs-white chs-ripple" style="border: 1px solid #634aa5;">
+                <p>
+                    <span  style="font-weight: bold" style="width: 200px;">БИЧВЭРИЙГ → ЯРИАНД</span>
+                    <br/>
+                    хөрвүүлэхийг турших</p>
+            </a>
+        </div>
+        <br><br><br><br>
+         <textarea id="text" placeholder="Текстээ оруулна уу..."></textarea>
+        <button id="submit">яриаг бичвэрт хөрвүүлэх</button>
+          <br><br><br>  
+
+        <div class="chs-third" style="padding-left: 370px">
+            <a href="/stt" class="chs-btn chs-white chs-ripple" style="border: 1px solid #634aa5;">
+                <p>
+                    <span style="font-weight: bold" style="width: 450px;"> ЯРИАГ → БИЧВЭРТ</span>
+                    <br/>
+                    хөрвүүлэхийг турших</p>
+
+            </a>
+
+           
+        </div>
+        <br>
+        <br><br><br><br>
+
+          <a id="instructions" style="padding-left: 10px" href="saruul.html"> Энд дарч эхэлнэ үү </a>
+
+        
+            </div>
+    
+    <div class="chs-container chs-content" style="padding:64px 16px" id="about">
+       
+
+    
+       <div class="chs-container chs-content" style="padding:30px 6px" id="team">
+        <h3 class="chs-center">МАНАЙ БАГ</h3>
+        <div class="chs-row-padding" style="margin-top:64px">
+            <div class="chs-third chs-margin-bottom">
+                <div class="chs-card">
+                    <img src="saruul.jpg" alt="Саруул" style="width:60%">
+                    <div class="chs-container">
+                        <h3>С.Мөнхсаруул</h3>
+                        <p>Мэдээллийн технологи III түвшиний оюутан.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chs-third chs-margin-bottom" style="margin-left: 30%" >
+                <div class="chs-card">
+                    <img src="naraa.jpg" alt="Төгөлдөр" style="width:57%">
+                    <div class="chs-container">
+                        <h3>Ц.Наранжаргал</h3>
+                        <p>Мэдээллийн технологи III түвшиний оюутан.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br>  <br><br><br><br> <br><br><br><br><br><br>
+              <div class="chs-third chs-margin-bottom">
+                <div class="chs-card">
+                    <img src="suvde.jpg" alt="Төгөлдөр" style="width:60%">
+                    <div class="chs-container">
+                        <h3>Э.Сувд-Эрдэнэ</h3>
+                        <p>Мэдээллийн технологи III түвшиний оюутан.</p>
+                        
+                    </div>
+                </div>
+            </div>
+              <div class="chs-third chs-margin-bottom" style="margin-left:30%;">
+                <div class="chs-card">
+                    <img src="uugana.jpg" alt="Төгөлдөр" style="width:60%">
+                    <div class="chs-container">
+                        <h3>Б.Ууганбилэг</h3>
+                        <p>Мэдээллийн технологи III түвшиний оюутан.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+           
+                         
+            
+
+    
+    <div id="modal01" class="chs-modal chs-black" onclick="this.style.display = 'none'">
+        <span class="chs-button chs-xxlarge chs-black chs-padding-large chs-display-topright" title="Close Modal Image">&times;</span>
+        <div class="chs-modal-content chs-animate-zoom chs-center chs-transparent chs-padding-64">
+            <img id="img01" class="chs-image">
+            <p id="caption" class="chs-opacity chs-large"></p>
+        </div>
+    </div>
+
+    
+    <div class="chs-container chs-center" style="padding:64px 16px" id="cases">
+        <h3>ТАЙЛАН</h3>
+        <p class="chs-large">Хичээлийн явцад хийсэн ажлын тайлан</p>
+       <a id="instructions" href="https://prezi.com/p/b3d7t2xy0kvm/?present=1"> Тайлан 1 - Төлөвлөгөө, сэдвийн судалгаа </a> <br>
+        <a id="instructions" href="https://www.powtoon.com/my-powtoons/?#/">Тайлан 2 - Демоны загвар гаргах, үйл явц</a>
+       
+       
+
+    
+    <div class="chs-container" style="padding:64px 16px" id="contact">
+        <div class="chs-content">
+            <h3 class="chs-center">ХОЛБОО БАРИХ</h3>
+            <p class="chs-center chs-large" style="margin-bottom:48px;">Та бидэнтэй холбоо барихыг хүсэж байвал:</p>
+            <div class="chs-half">
+                <p>
+                    <i class=" chs-xlarge chs-margin-right" style="margin-right:65%;"></i>
+                     Их сургуулийн гудамж - 1, Бага тойруу, Сүхбаатар дүүрэг, Улаанбаатар хот</p>
+                <p>
+                    <i class=" chs-xlarge chs-margin-right" style="margin-right:45%;"></i>
+                    Утас: +976 ********</p>
+                <p>
+                    <i class=" chs-xlarge chs-margin-right"></i>
+                    Э-мэйл:
+                    <a >info@blabla.mn</a>
+                </p>
+
+                
+
+            </div>
+
+            <div class="chs-half">
+                <div id="response"></div>
+                <form name="contact-form" id="contact-form">
+                    <p><input class="chs-input chs-border" type="text" placeholder="Нэр" required="required" id="name" name="name"></p>
+                    <p><input class="chs-input chs-border" type="email" placeholder="Э-мэйл" required="required" id="email" name="email"></p>
+                    <p>
+                        <textarea class="chs-input chs-border" placeholder="Зурвас" required="required" id="message" name="message"></textarea>
+                    </p>
+                    <p>
+                        <input type="hidden" id="csrf_token" name="csrf_token" value="IfdDhuGGntJVHrrh5OSnMQqeJNj2vJgPflaNca&#43;k1qgUWTV8AE6sc20c622ZGsgwiNA/pzszSPZsqVWpS0EaHQ==">
+                        <button class="chs-button chs-primary" type="submit">
+                            
+                            Зурвас илгээх
+                        </button>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+   
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+            <script>
+                $(document).ready(function () {
+                    
+                    $("a").on('click', function (event) {
+
+                        
+                        if (this.hash !== "") {
+                            
+                            event.preventDefault();
+
+                            
+                            var hash = this.hash;
+
+                            
+                            
+                            $('html, body').animate({
+                                scrollTop: $(hash)
+                                    .offset()
+                                    .top
+                            }, 800, function () {
+
+                                
+                                window.location.hash = hash;
+                            });
+                        } 
+                    });
+                });
+
+                
+                var mybutton = document.getElementById("toTop");
+
+                
+                window.onscroll = function () {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
+
+                
+                function onClick(element) {
+                    document
+                        .getElementById("img01")
+                        .src = element.src;
+                    document
+                        .getElementById("modal01")
+                        .style
+                        .display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                }
+
+                
+                var mySidebar = document.getElementById("mySidebar");
+
+                function chs_open() {
+                    if (mySidebar.style.display === 'block') {
+                        mySidebar.style.display = 'none';
+                    } else {
+                        mySidebar.style.display = 'block';
+                    }
+                }
+
+                
+                function chs_close() {
+                    mySidebar.style.display = "none";
+                }
+
+                var csrfToken = document
+                    .getElementById("csrf_token")
+                    .value;
+                document.addEventListener("DOMContentLoaded", function () {
+                    document
+                        .forms["contact-form"]
+                        .addEventListener("submit", postData);
+                });
+
+                function postData(formsubmission) {
+                    var name = document.getElementById("name");
+                    var email = document.getElementById("email");
+                    var message = document.getElementById("message");
+                    var params = "name=" + encodeURIComponent(name.value) + "&email=" + encodeURIComponent(email.value) + "&message=" + encodeURIComponent(message.value);
+
+                    var http = new XMLHttpRequest()
+                    http.open("POST", "/contact", true);
+                    http.setRequestHeader('x-csrf-token', csrfToken);
+                    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                    http.onreadystatechange = function () {
+                        var results = document.getElementById("response");
+                        results.className = '';
+                        if (http.readyState == 4 && http.status == 200) {
+                            var response = JSON.parse(http.responseText);
+                            if ('err' in response) {
+                                results
+                                    .classList
+                                    .add("chs-panel", "chs-red", "chs-display-container");
+                                results.innerText = response['err'];
+                            } else if ('msg' in response) {
+                                results
+                                    .classList
+                                    .add("chs-panel", "chs-green", "chs-display-container");
+                                results.innerText = response['msg'];
+                                document.getElementById("contact-form").style.display = "none";
+                                name.value = '';
+                                email.value = '';
+                                message.value = '';
+                            }
+                        }
+                    }
+                    http.send(params);
+                    formsubmission.preventDefault();
+                }
+            </script>
+        <div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&notification.length>0&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; right: 0; display: flex; padding: 0 5%}} .web-hosting-90-off-image {max-width: 90%; margin-top: 20px;} .content-wrapper {z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); max-width: 350px; border: 0; border-radius: 3px; background-color: #ff4546 !important; padding: 15px 55px !important;  margin-bottom: 48px; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">TRANSFER NOW</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background: url(https://cdn.000webhost.com/000webhost/promotions/cyber-monday-2019-bg.jpg); background-size: cover; background-repeat: no-repeat; color: #ffffff; border-color: #ff123a; border-width: 8px;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Cyber Monday Sale",h1Tag.setAttribute("style",'color: white;  margin-top: 48px; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 600;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Get 90% Off!",h2Tag.setAttribute("style",'color: white; margin: 45px 0; font-family: "Roboto", sans-serif; font-size: 80px; font-weight: 600;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="Don’t miss the opportunity to enjoy up to <strong>4x WordPress Speed, Free SSL and all premium features</strong> available for a fraction of the price!",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/cyber-monday-2019-img.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script></body>
+
+    <footer class=" chs-black chs-padding-64">
+            © Дуу хоолой танилт 2019
+        
+           
+    </footer>
+
+            
+    </html>
+
+
+
+
