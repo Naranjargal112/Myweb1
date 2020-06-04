@@ -239,7 +239,9 @@ body, html {
     -o-animation: ripple 1.5s ease-out infinite;
     animation: ripple 1.5s ease-out infinite;
   }
-  
+.footer{
+    width:100%;
+}
 ul {
     position: absolute;
     height: 100%;
