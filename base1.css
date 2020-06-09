@@ -45,6 +45,7 @@ body{
     background-color: #634aa5;
 
 }
+}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
     display:block
 }
@@ -1320,6 +1321,9 @@ a{
 }
 .chs-text-white,.chs-hover-text-white:hover{
     color:#fff!important
+}
+.chs-text-foot,.chs-hover-text-foot:hover{
+    color:#634aa5 ;
 }
 .chs-text-black,.chs-hover-text-black:hover{
     color:#000!important
