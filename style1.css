@@ -9,8 +9,6 @@ body, html {
     color:#000000;
 }
 
-
-/* Full height image header */
 .bgimg {
     background-position: center;
     background-size: cover;
@@ -103,7 +101,7 @@ body, html {
 }
 
 #btn-transc span.eq {
-    background: url("/static/img/transcribe.svg") no-repeat top left;
+
     background-size: contain;
     cursor: pointer;
     display: inline-block;
@@ -112,7 +110,7 @@ body, html {
 }
 
 #btn-restart span.re {
-    background: url("/static/img/rerecord.svg") no-repeat top left;
+   
     background-size: contain;
     cursor: pointer;
     display: inline-block;
@@ -121,7 +119,7 @@ body, html {
 }
 
 #btn-trans span.tr {
-    background: url("/static/img/translate.svg") no-repeat top left;
+    
     background-size: contain;
     cursor: pointer;
     display: inline-block;
@@ -153,7 +151,6 @@ body, html {
 }
 
 .img-stop {
-    /* Similar syntax to box-shadow */
     -webkit-filter: drop-shadow( 0 0 5px rgba(51, 204, 255, .7));
     filter: drop-shadow( 0 0 5px rgba(51, 204, 255, .7));   
 }
@@ -161,7 +158,7 @@ body, html {
 .record-stop {
     width: 90px;
     height: 90px;
-    background: url("/static/img/record.svg") no-repeat;
+   
     -webkit-filter: drop-shadow( 0 0 5px rgba(51, 204, 255, .7));
     filter: drop-shadow( 0 0 5px rgba(51, 204, 255, .7));
     display: block;
@@ -170,7 +167,7 @@ body, html {
 
 .record-stop:hover {
     cursor: pointer;
-    background: url("/static/img/stop.svg") no-repeat;
+    
 }
 
 #timer {
@@ -217,7 +214,7 @@ body, html {
   }
   
   #ripple-loader:before{
-    content:'Ð¢Ò¯Ñ€ Ñ…Ò¯Ð»ÑÑÐ½Ñ Ò¯Ò¯';
+    
     font-family: Roboto, 'Open Sans', sans-serif;
     font-size: 1.2em;
     color: #FFF;
